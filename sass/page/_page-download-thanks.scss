@@ -1,0 +1,30 @@
+@use "../base/definition" as *;
+
+.download_section_right_thanks {
+    font-size: 14px;
+}
+
+.download_section_right_download_link_guid {
+    margin-top: 40px;
+}
+
+.download_section_right_download_link {
+    margin-top: 14px;
+
+    a {
+        display: inline-block;
+        margin-left: 10px;
+        color: #023E78;
+        border-bottom: 1px solid #023E78;
+        line-height: 1;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}
+
+.download_section_right_download_mail {
+    margin-top: 40px;
+
+}

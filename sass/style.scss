@@ -1,0 +1,32 @@
+
+// base
+@use "base/definition";
+
+//layout
+@use "layout/common";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/mainvisual";
+
+// component
+@use "component/button";
+@use "component/heading_title";
+
+
+
+// page
+@use "page/front-page";
+@use "page/home";
+@use "page/page-about";
+@use "page/page-case";
+@use "page/page-contact";
+@use "page/page-contact-thanks";
+@use "page/page-download";
+@use "page/page-download-thanks";
+@use "page/page-service";
+@use "page/single";
+
+
+
+
+

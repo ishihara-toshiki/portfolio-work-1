@@ -1,0 +1,63 @@
+
+@use "../base/definition" as *;
+
+body {
+    color: $color-text-black;
+    // font-family: 'Fira Sans', 'Noto Sans JP', sans-serif;
+    font-family: 'Fira Sans', 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: $color-bg;
+    
+}
+
+// .body {
+//     overflow: hidden;
+// }
+
+  
+img {
+    width: 100%;
+    height: auto;
+}
+  
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+
+
+}
+
+.inner {
+    max-width: $layout-width-inner;
+    width: 100%;
+    margin: auto;
+
+    @include mq('tab') {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mq('sp') {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+.is-pc {
+    @include mq('sp') {
+        display: none;
+    }
+}
+
+.is-sp {
+    @include mq('pc') {
+        display: none;
+    }
+
+    @include mq('tab') {
+        display: none;
+    }
+}

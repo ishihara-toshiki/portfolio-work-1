@@ -1,0 +1,583 @@
+@use "../base/definition" as *;
+
+
+//service_service
+
+.service_service_title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-size: 20px;
+    }
+}
+
+.service_service_card_items {
+    margin-top: 200px;
+}
+
+
+.service_service_card_item {
+    padding-bottom: 70px;
+
+
+    &:not(:first-child) {
+        // padding-top: 300px;
+        padding-top: 120px;
+        margin-top: 110px;
+
+        
+    }
+
+    &:last-child {
+        margin-bottom: 90px;
+    }
+
+    @include mq('sp') {
+        padding-bottom: 0px;
+
+        &:not(:first-child) {
+            padding-top: 160px;
+            margin-top: 100px;
+    
+            
+        }
+    }
+}
+
+.service_service_card_item_inner {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    @include mq('sp') {
+        display: block;
+    }
+
+}
+
+.service_service_card_item_inner_2 {
+    transform: skewY(-10deg);
+}
+
+.service_service_card_item_background {
+    background: linear-gradient(transparent 0%, #edf3f8 0%);
+    transform: skewY(10deg);
+}
+
+
+.service_service_card_item_left {
+    background: rgba(255, 255, 255, 0.9);
+    width: 50%;
+    padding: 80px 36px 60px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 120px;
+        top: 0;
+        left: 58px;
+        transform: translateY(-50%);
+    }
+
+    @include mq('sp') {
+        width: 100%;
+        padding: 44px 20px 40px 20px;
+
+        &::before {
+            left: 22px;
+            width: 70px;
+            height: 90px;
+        }
+    }
+
+}
+
+.service_service_card_item_left_1 {
+    transform: translate(54px, -60px);
+
+    &::before {
+        background: url(../img/img-service-page/number01@2x.png) no-repeat top center / contain;
+    }
+
+    @include mq('sp') {
+        transform: translate(0px, 0px);
+    }
+}
+
+.service_service_card_item_left_2 {
+    // transform: translate(-54px, -60px) skewY(-10deg);
+    transform: translate(-54px, -60px);
+
+    
+    &::before {
+        background: url(../img/img-service-page/number02@2x.png) no-repeat top center / contain;
+        right: 58px;
+        left: auto;
+    }
+
+    @include mq('sp') {
+        transform: translate(0px, 0px);
+
+        &::before {
+            right: 22px;
+        }
+    }
+}
+
+.service_service_card_item_left_3 {
+    transform: translate(54px, -60px);
+
+    &::before {
+        background: url(../img/img-service-page/number03@2x.png) no-repeat top center / contain;
+    }
+
+    @include mq('sp') {
+        transform: translate(0px, 0px);
+    }
+}
+
+.service_service_card_item_right {
+    width: 50%;
+
+    @include mq('sp') {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+}
+
+.service_service_card_item_right_2 {
+    @include mq('sp') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+}
+
+.service_service_card_item_left_title {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @include mq('sp') {
+        font-size: 28px;
+    }
+}
+
+.service_service_card_item_left_subtitle {
+    font-weight: 500;
+    color: $color-main;
+
+    @include mq('sp') {
+        font-size: 14px;
+    }
+}
+
+.service_service_card_item_left_explain {
+    margin-top: 60px;
+    font-size: 14px;
+
+    @include mq('sp') {
+        margin-top: 32px;
+    }
+}
+
+.service_service_card_item_left_detail {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.service_service_card_item_left_details {
+    margin-top: 60px;
+
+    @include mq('sp') {
+        margin-top: 32px;
+    }
+}
+
+.service_service_card_item_left_detail_left {
+    width: 70px;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+
+    @include mq('sp') {
+        padding: 20px 0;
+    }
+
+
+}
+
+.service_service_card_item_left_detail_right {
+    width: calc(100% - 70px);
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+
+    @include mq('sp') {
+        padding: 20px 0;
+    }
+
+
+
+}
+
+.service_service_card_item_left_detail_left_bottom {
+    border-bottom: 1px solid #ccc;
+
+}
+
+.service_service_card_item_left_detail_right_bottom {
+    border-bottom: 1px solid #ccc;
+
+}
+
+.service_service_card_item_left_btn_wrapper {
+    text-align: center;
+    margin-top: 60px;
+
+    @include mq('sp') {
+        margin-top: 32px;
+    }
+}
+
+
+
+//service_common
+
+.service_section_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+//service_flow
+
+.service_flow {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background: url(../img/img-service-page/bg-service-flow@2x.png) center / cover no-repeat;
+
+    @include mq('sp') {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+
+.service_flow_title {
+    color: $color-text-white;
+}
+
+.service_qa_title {
+    color: $color-text-black;
+}
+
+.service_flow_items {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.service_flow_item {
+    width: 25%;
+
+    @include mq('sp') {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.service_flow_item_step {
+    color: $color-accent-ylellow;
+
+
+    @include mq('sp') {
+        margin-right: 16px;
+        width: 46px;
+    }
+}
+
+.service_flow_item_step_text {
+    font-size: 20px;
+    display: inline-block;
+
+}
+
+.service_flow_item_step_number {
+    font-size: 40px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1;
+
+}
+
+.service_flow_item_content {
+    padding-top: 46px;
+    padding-left: 34px;
+    padding-right: 34px;
+    height: 210px;
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 100%;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 105px 0 105px 12px;
+        z-index: 2;
+    }
+
+    @include mq('sp') {
+        padding-top: 22px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        height: auto;
+        width: calc(100% - 46px);
+
+        &::after {
+            top: 100%;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 20px 36.66667vw 0px 36.66667vw;
+            z-index: 2;
+        }
+    }
+}
+
+.service_flow_item_content_1 {
+    background: #EDF3F8;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-color: transparent transparent transparent #EDF3F8;
+
+        @include mq('sp') {
+            border-color: #EDF3F8 transparent transparent transparent ;
+
+        }
+    }
+}
+
+.service_flow_item_content_2 {
+    background: #DDE8F0;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-color: transparent transparent transparent #DDE8F0;
+
+        @include mq('sp') {
+            border-color: #DDE8F0 transparent transparent transparent ;
+
+        }
+    }
+}
+
+.service_flow_item_content_3 {
+    background: #C7DBE9;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-color: transparent transparent transparent #C7DBE9;
+
+        @include mq('sp') {
+            border-color: #C7DBE9 transparent transparent transparent ;
+
+        }
+    }
+}
+
+.service_flow_item_content_4 {
+    background: #B0D0E5;
+    position: relative;
+
+    &::after {
+        content: none;
+        position: absolute;
+        border-color: transparent transparent transparent #B0D0E5;
+
+        @include mq('sp') {
+            border-color: #B0D0E5 transparent transparent transparent ;
+
+        }
+    }
+}
+
+.service_flow_item_content_title {
+    font-size: 20px;
+    color: $color-main;
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+
+.service_flow_item_content_explain {
+    font-size: 14px;
+    margin-top: 14px;
+
+    @include mq('sp') {
+        margin-top: 8px;
+    }
+}
+
+.service_flow_item_content_cancel {
+    font-size: 14px;
+    color: $color-accent-pink;
+}
+
+
+
+
+//service_qa
+
+.service_qa {
+    padding: 140px 0;
+
+    @include mq('sp') {
+        padding: 60px 0 80px 0;
+    }
+}
+
+.service_qa_title {
+    color: $color-text-black;
+}
+
+.service_qa_items {
+    width: 100%;
+    max-width: 688px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    @include mq('sp') {
+        margin-top: 26px;
+    }
+
+}
+
+.service_qa_item {
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0px 30px 0;
+}
+
+
+
+.service_qa_item_head_left {
+    display: inline-block;
+}
+
+.service_qa_item_head_right {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 10px;
+}
+
+.service_qa_item_btn {
+    display: inline-block;
+	width: 21px;
+	height: 21px;
+    margin-left: auto;
+	position: relative;
+	cursor: pointer;
+
+    &::before,&::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: 4px;
+        width: 18px;
+        height: 2px;
+        background: $color-text-black;
+        transition: all ease 0.3s;
+    }
+
+    &::after {
+        transform: rotate(90deg);
+    }
+
+    // &.is-open {
+
+    //     &::before {
+    //         transform: rotate(45deg);
+    //     }
+    
+    //     &::after {
+    //         transform: rotate(-45deg);
+    //     }
+    // }
+}
+
+.service_qa_item_head {
+    display: block;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    transition: all ease 0.3s;
+    padding-right: 36px;
+
+    &.is-open {
+
+        color: $color-accent-pink;
+
+        .service_qa_item_btn {
+            &::before {
+                transform: rotate(45deg);
+                background: $color-accent-pink;
+
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                background: $color-accent-pink;
+            }
+        }
+    }
+
+}
+
+.service_qa_item_body {
+    display: none;
+    padding: 30px 60px 0px 40px;
+
+    @include mq('sp') {
+        padding: 30px 10px 0px 0px;
+
+    }
+}

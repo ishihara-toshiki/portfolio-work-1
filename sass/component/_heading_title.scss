@@ -1,0 +1,36 @@
+@use "../base/definition" as *;
+
+//section_title
+
+.section_title {
+    font-size: 6rem;
+    font-weight: bold;
+    color: $color-main;
+    line-height: 1.3;
+
+    @include mq('sp') {
+        font-size: 3rem;
+    }
+}
+
+.section_subtitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $color-main;
+
+    @include mq('sp') {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
+
+//section_title_color_white 
+.section_title_color_white {
+    color: $color-text-white;
+}
+
+.section_subtitle_color_white {
+    color: $color-text-white;
+}
+
+

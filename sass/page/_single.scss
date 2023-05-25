@@ -1,0 +1,154 @@
+@use "../base/definition" as *;
+
+.news_article_single_item_top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.news_article_single_item_top_category {
+    margin-right: auto;
+}
+
+.news_article_single_item_top_category_btn {
+    border: 1px solid $color-accent-pink;
+    padding: 4px 16px;
+    display: inline-block;
+    background: #FFFFFF;
+    color: $color-accent-pink;
+    font-size: 14px;
+    font-weight: 500;
+
+    @include mq('sp') {
+        padding: 2px 8px;
+    }
+
+}
+
+.news_article_single_item_top_date {
+    color: #888888;
+    font-size: 14px;
+}
+
+.news_article_single_item_title {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+
+    @include mq('sp') {
+        margin-top: 8px;
+        font-size: 20px;
+    }
+}
+
+.news_article_single_item_img {
+    margin-top: 40px;
+
+    @include mq('sp') {
+        margin-top: 24px;
+    }
+}
+
+
+
+.news_article_single_item_text_wrapper {
+    margin-top: 40px;
+}
+
+.news_article_single_item_h2_heading {
+    font-size: 20px;
+    background: #F8F8F8;
+    color: $color-main;
+    font-weight: bold;
+    padding: 6px 0 6px 26px;
+    border-left: 6px solid $color-main;
+}
+
+.news_article_single_item_subheading {
+    margin-top: 30px;
+    font-size: 14px;
+
+    @include mq('sp') {
+        margin-top: 20px;
+    }
+}
+
+.news_article_single_item_h3_heading {
+    font-size: 18px;
+    color: $color-main;
+    font-weight: bold;
+    padding: 4px 0;
+    border-bottom: 1px solid $color-main;
+}
+
+.news_article_single_item_h4_heading {
+    color: $color-main;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.news_article_single_item_lists {
+    font-size: 14px;
+    list-style: inside;
+}
+
+.news_article_single_item_list {
+    list-style: inside;
+}
+
+.news_article_single_item_quote_wrapper {
+    background: #F8F8F8;
+    padding: 35px;
+    margin-left: 35px;
+    border-left: 3px solid $color-main;
+    font-size: 14px;
+    position: relative;
+    z-index: -2;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/img-single-page/quote.svg) no-repeat top center;
+        top: 10px;
+        left: 16px;
+        width: 82px;
+        height: 160px;
+        z-index: -1;
+    }
+
+    @include mq('sp') {
+        margin-left: 0;
+    }
+
+}
+
+
+//pagination_single 
+
+.pagination_single {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 48px;
+}
+
+.pagination_single_previous {
+    margin-right: auto;
+}
+
+.pagination_single_btn {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #FFFFFF;
+    color: $color-btn-main;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid $color-btn-main;
+    border-radius: 4px;
+    
+    &:hover {
+      background: $color-btn-main;
+      color: #FFFFFF;
+
+    }
+}

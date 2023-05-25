@@ -1,0 +1,288 @@
+@use "../base/definition" as *;
+
+
+//ボタンデフォルト (downloadボタン)
+.btn {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #FFFFFF;
+    color: $color-btn-main;
+    font-size: 14px;
+    border: 2px solid $color-btn-main;
+    transition: all ease .3s;
+    
+    &:hover {
+      background: $color-btn-main;
+      color: #FFFFFF;
+
+    }
+}
+
+//contactボタン
+
+.btn_contact {
+    background: $color-btn-main;
+    color: #FFFFFF;
+
+    &:hover {
+        background: $color-main-deep;
+        color: #FFFFFF;
+    }
+}
+
+.btn_drawer_download {
+    padding: 20px 0px;
+    width: 270px;
+    text-align: center;
+    background: $color-btn-main;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.btn_drawer_contact {
+    padding: 20px 0px;
+    width: 270px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    color: $color-btn-main;
+    font-size: 16px;
+}
+
+
+
+//section_btn
+.section_btn {
+    padding: 20px 70px;
+    position: relative;
+
+    &:hover {
+        .section_btn_arrow {
+
+            svg {
+                fill: #FFFFFF;
+                right: 12px;
+            }
+        
+        }
+    }
+}
+
+.section_btn_arrow {
+
+    svg {
+        position: absolute;
+        display: inline-block;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        fill: $color-main;
+        transition: all 0.3s ease 0s;
+
+    }
+
+}
+
+
+//link_btn (footer)
+.link_btn {
+    padding: 20px 80px;
+    background: transparent;
+    color: $color-accent-ylellow;
+    font-size: 24px;
+    border: 2px solid $color-accent-ylellow;
+    font-weight: bold;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        background: url(../img/img-front-page/icon-arrow-right01.svg) no-repeat top center / contain;
+        width: 20px;
+        height: 14px;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+        transition: all 0.3s ease 0s;
+    }
+
+    
+    &:hover {
+        background: $color-accent-ylellow;
+        color: $color-text-black;
+
+        
+        &::after {
+           right: 20px;
+           background: url(../img/img-front-page/icon-arrow-right01-black.svg) no-repeat top center / contain;
+
+        }
+    }
+}
+
+//view_color_white
+.view {
+    padding-right: 104px;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: bold;
+
+    &:hover {
+        .view_line {
+            &::before {
+                width: 145px;
+            }
+
+            &::after {
+                left: 125px;
+            }
+        }
+
+    }
+
+    @include mq('sp') {
+        font-size: 20px;
+        padding-right: 65px;
+    }
+}
+
+.view_text {
+    display: inline-block;
+    color: #FFFFFF;
+    padding-right: 20px;
+
+    @include mq('sp') {
+        padding-right: 10px;
+    }
+}
+
+.view_line {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        width: 95px;
+        height: 2px;
+        background: #FFFFFF;
+        transition: width 0.3s, right 0.3s;
+
+        @include mq('sp') {
+            width: 60px;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 75px;
+        transform: translateY(-160%) rotate(40deg);
+        width: 12px;
+        height: 2px;
+        background: #FFFFFF;
+        transition: left 0.3s, right 0.3s;
+
+        @include mq('sp') {
+            left: 40px;
+            width: 10px;
+        }
+
+    }
+
+}
+
+.view_circle {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-bottom: 14px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: transparent;
+        border: 2px solid $color-accent-ylellow;
+        transform: translateY(-50%);
+        
+        @include mq('sp') {
+            width: 40px;
+            height: 40px;
+            left: 20px;
+
+        }
+
+    }
+    
+}
+
+
+//view_color_black
+.view_color_black {
+
+    .view_text {
+        color: $color-text-black;
+    }
+
+    .view_line {
+
+        &::before {
+            background: $color-text-black;
+        }
+    
+        &::after {
+            background: $color-text-black;
+        }
+    
+    }
+
+    .view_circle {
+    
+        &::before {
+            background: $color-accent-ylellow;
+            z-index: -1;
+        }
+    }
+}
+
+
+//view_color_main
+.view_color_main {
+
+    .view_text {
+        color: $color-main;
+    }
+
+    .view_line {
+
+        &::before {
+            background: $color-main;
+        }
+    
+        &::after {
+            background: $color-main;
+        }
+    
+    }
+
+    .view_circle {
+    
+        &::before {
+            background: $color-accent-ylellow;
+            z-index: -1;
+        }
+    }
+}
+
+
+
+
+

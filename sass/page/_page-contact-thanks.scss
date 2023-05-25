@@ -1,0 +1,22 @@
+@use "../base/definition" as *;
+
+.contact_section_guid {
+    font-size: 14px;
+}
+
+.contact_section_back_home {
+    margin-top: 14px;
+    font-size: 14px;
+
+    a {
+        display: inline-block;
+        margin-left: 10px;
+        color: #023E78;
+        border-bottom: 1px solid #023E78;
+        line-height: 1;
+
+        &:hover {
+            opacity: 0.7;
+        }
+    }
+}

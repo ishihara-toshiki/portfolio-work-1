@@ -1,0 +1,314 @@
+@use "../base/definition" as *;
+
+.case_section {
+    padding-bottom: 160px;
+
+    @include mq('sp') {
+        padding-bottom: 100px;
+    }
+}
+
+//case_section_nav
+.case_section_nav_lists {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.case_section_nav_list {
+    display: block;
+    background: #EEEEEE;
+    font-size: 14px;
+    // padding: 10px 36px;
+    width: 210px;
+    margin-left: 16px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px 0;
+
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    
+    &:hover {  
+        background: #DDDDDD;
+    }
+
+    @include mq('sp') {
+        width: 294px;
+        margin: 0 auto;
+        margin-top: 18px;
+
+        &:first-child {
+            margin-left: auto;
+            margin-top: 0;
+        }
+    }
+}
+
+
+//case_section_kind 
+.case_section_kind {
+    margin-top: 80px;
+
+    @include mq('sp') {
+        margin-top: 60px;
+    }
+}
+
+.case_section_heading {
+    border-left: 6px solid $color-main;
+}
+
+.case_section_title {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    padding-left: 10px;
+
+    @include mq('sp') {
+        display: block;
+        font-size: 24px;
+    }
+}
+
+.case_section_subtitle {
+    display: block;
+    color: $color-main;
+    margin-left: 10px;
+    font-size: 16px;
+
+    @include mq('sp') {
+        margin-left: 4px;
+        font-size: 14px;
+
+    }
+}
+
+//case_section_items
+.case_section_items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+
+    @include mq('sp') {
+        margin-top: 25px;
+        display: block;
+    }
+
+}
+
+.case_section_item {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+    border-radius: 12px;
+    // overflow: hidden;
+
+    @include mq('pc') {
+        width: calc(50% - 80px * 1 / 2);
+
+        &:not(:nth-child(2n + 1)) {
+            margin-left: 80px;
+        }
+    
+        &:nth-child(n + 3) {
+            margin-top: 60px;
+        }
+    }
+
+    @include mq('sp') {
+        width: 100%;
+    
+        &:nth-child(n + 2) {
+            margin-top: 54px;
+        }
+    }
+
+}
+
+.case_section_item_heading {
+    background: $color-main;
+    border-radius: 12px 12px 0 0;
+    color: #FFFFFF;
+    padding: 14px 40px;
+    position: relative;
+
+    @include mq('sp') {
+        padding: 18px 20px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 112px;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+        border-radius: 12px;
+
+        @include mq('sp') {
+            width: 90px;
+            height: 68px;
+            border-radius: 4px;
+        }
+
+    }   
+}
+
+.case01 {
+    &::after {
+        background: url(../img/img-case-page/img-case01.png) no-repeat top center / cover;
+    }
+}
+
+.case02 {
+    &::after {
+        background: url(../img/img-case-page/img-case02.png) no-repeat top center / cover;
+    }
+}
+
+.case03 {
+    &::after {
+        background: url(../img/img-case-page/img-case03.png) no-repeat top center / cover;
+    }
+}
+
+.case04 {
+    &::after {
+        background: url(../img/img-case-page/img-case04.png) no-repeat top center / cover;
+    }
+}
+
+.case05 {
+    &::after {
+        background: url(../img/img-case-page/img-case05.png) no-repeat top center / cover;
+    }
+}
+
+.case06 {
+    &::after {
+        background: url(../img/img-case-page/img-case06.png) no-repeat top center / cover;
+    }
+}
+
+.case07 {
+    &::after {
+        background: url(../img/img-case-page/img-case07.png) no-repeat top center / cover;
+    }
+}
+
+.case08 {
+    &::after {
+        background: url(../img/img-case-page/img-case08.png) no-repeat top center / cover;
+    }
+}
+
+.case09 {
+    &::after {
+        background: url(../img/img-case-page/img-case09.png) no-repeat top center / cover;
+    }
+}
+
+
+.case_section_item_heading_buiness {
+    font-size: 14px;
+
+    @include mq('sp') {
+        font-size: 12px;
+    }
+}
+
+.case_section_item_heading_company {
+    font-size: 24px;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+
+    .company_honor {
+        font-size: 16px;
+        margin-left: 10px;
+
+        @include mq('sp') {
+            font-size: 14px;
+        }
+    }
+}
+
+.case_section_item_detail {
+    padding: 40px;
+
+    @include mq('sp') {
+        padding: 20px;
+    }
+
+
+}
+
+.case_section_item_detail_course {
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 4px;
+    font-weight: 500;
+
+}
+
+.case_section_item_detail_list {
+    margin-top: 28px;
+
+    @include mq('sp') {
+        margin-top: 20px;
+    }
+}
+
+.case_section_item_detail_list_title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    padding-left: 30px;
+    position: relative;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/img-case-page/icon-check.svg) no-repeat top center / cover;
+        width: 20px;
+        height: 20px;
+        top: 44%;
+        left: 0;
+        transform: translateY(-44%);
+
+    }
+
+}
+
+.case_section_item_detail_list_explain {
+    font-size: 14px;
+}
+
+
+//case_section_btn_wrapper
+.case_section_btn_wrapper {
+    text-align: center;
+    margin-top: 60px;
+
+    @include mq('sp') {
+        margin-top: 40px;
+    }
+}
+
+.u-case_section_btn {
+    padding: 20px 50px;
+}
+

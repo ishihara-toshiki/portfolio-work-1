@@ -1,0 +1,364 @@
+@use "../base/definition" as *;
+
+//page-about
+
+
+//about_section
+
+.about_section_inner {
+    max-width: $layout-width-inner;
+    width: 100%;
+    margin: auto;
+
+    @include mq('tab') {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include mq('sp') {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.about_section_img {
+    height: 353px;
+    width: 100%;
+    position: relative;
+
+    @include mq('sp') {
+        height: 281px;
+    }
+}
+
+.about_section_img_1 {
+    background: url(../img/img-about-page/img-company01_pc@2x.png) center / cover no-repeat;
+
+    @include mq('sp') {
+        background: url(../img/img-about-page/img-company01_sp@2x.png) center / cover no-repeat;
+
+    }
+}
+
+.about_section_img_2 {
+    background: url(../img/img-about-page/img-company02_pc@2x.png) center / cover no-repeat;
+
+    @include mq('sp') {
+        background: url(../img/img-about-page/img-company02_sp@2x.png) center / cover no-repeat;
+
+    }
+}
+
+.about_section_content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.about_section_title {
+    font-size: 100px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 1.1;
+
+    @include mq('sp') {
+        font-size: 50px;
+    }
+}
+
+.about_section_subtitle {
+    font-size: 24px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.about_section_explain {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 688px;
+    width: 100%;
+    padding: 28px 36px;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16);
+
+
+    @include mq('sp') {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+.about_section_explain_title {
+    font-size: 24px;
+    font-weight: bold;
+    color: $color-main;
+    text-align: center;
+
+    @include mq('sp') {
+        font-size: 24px;
+    }
+}
+
+.about_section_explain_text {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 14px;
+
+    @include mq('sp') {
+        margin-top: 16px;
+    }
+
+}
+
+.about_vision {
+    margin-top: 260px;
+
+    @include mq('sp') {
+        margin-top: 280px;
+    }
+}
+
+
+//about_company-info
+
+.about_company_info {
+    margin-top: 290px;
+    background: url(../img/img-about-page/bg-case@2x.png) center / cover no-repeat;
+    padding: 80px 0;
+
+    @include mq('sp') {
+        margin-top: 350px;
+        padding: 60px 0;
+    }
+}
+
+.about_company_info_wrapper {
+    background: #FFFFFF;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 40px 80px;
+
+    @include mq('sp') {
+        padding: 40px 20px;
+    }
+}
+
+.about_company_info_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.about_company_info_item {
+    display: flex;
+    // align-items: center;
+
+    // border-bottom: 1px solid #00000029;
+    // position: relative;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     left: 0;
+    //     bottom: -1px;
+    //     width: 30%;
+    //     height: inherit;
+    //     border: 1px solid $color-main;
+    // }
+
+    &:first-of-type {
+        margin-top: 60px;
+
+        @include mq('sp') {
+            margin-top: 40px;
+        }
+    }
+
+
+
+}
+
+.about_company_info_item_left {
+    width: 30%;
+    padding: 24px 28px;
+    border-top: 1px solid $color-main;
+    display: flex;
+    align-items: center;
+    overflow-wrap: break-word;
+
+    @include mq('sp') {
+        font-size: 14px;
+        padding: 16px 0px;
+    }
+
+
+
+}
+
+.about_company_info_item_left_last {
+    border-bottom: 1px solid $color-main;
+}
+
+
+
+.about_company_info_item_left_text {
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-weight: normal;
+    }
+}
+
+.about_company_info_item_right_text {
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-weight: normal;
+    }
+}
+
+.about_company_info_item_right {
+    width: 70%;
+    padding: 22px 28px;
+    border-top: 1px solid #00000029;
+    overflow-wrap: break-word;
+
+    @include mq('sp') {
+        padding: 16px 0px 16px 16px;
+        font-size: 14px;
+    }
+
+
+}
+
+.about_company_info_item_right_last {
+    border-bottom: 1px solid #00000029;
+}
+
+
+//about_officer 
+
+.about_officer {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    padding-bottom: 120px;
+    background: linear-gradient(transparent 60%, #edf3f8 60%);
+    transform: skewY(10deg);
+
+    @include mq('sp') {
+        margin-top: 60px;
+        background: linear-gradient(transparent 44%, #edf3f8 44%);
+
+    }
+
+}
+
+.about_officer_inner {
+    width: 100%;
+    max-width: 688px;
+    margin: 0 auto;
+    transform: skewY(-10deg);
+
+}
+
+.about_officer_title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about_officer_items {
+    margin-top: 60px;
+
+    @include mq('sp') {
+        margin-top: 40px;
+    }
+}
+
+.about_officer_item {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    @include mq('sp') {
+        display: block;
+    }
+}
+
+.about_officer_item_left {
+    width: 66%;
+    padding-right: 40px;
+    order: 1;
+
+    @include mq('sp') {
+        width: 100%;
+        padding-right: 0;
+        margin-top: 24px;
+        
+    }
+}
+
+.about_officer_item_right {
+    width: 34%;
+    order: 2;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.about_officer_item_right_img {
+    @include mq('sp') {
+        width: 100%;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+}
+
+.about_officer_item_left_name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.about_officer_item_left_position {
+    display: inline-block;
+    margin-right: 16px;
+    font-size: 14px;
+}
+
+.about_officer_item_left_introduce {
+    display: block;
+    margin-top: 28px;
+    font-size: 14px;
+
+    @include mq('sp') {
+        margin-top: 18px;
+    }
+}
+
+.about_officer_item_left_sns {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+
+    @include mq('sp') {
+        margin-top: 20px;
+    }
+}
+
+.about_officer_item_left_sns_item {
+    margin-right: 24px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}

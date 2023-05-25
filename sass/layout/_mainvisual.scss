@@ -1,0 +1,191 @@
+@use "../base/definition" as *;
+
+//main_visual
+
+.main_visual {
+    height: 250px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 250px;
+        width: 366px;
+    }
+}
+
+
+//main_visual_about
+.main_visual_about {
+    background: url(../img/img-about-page/mv-company_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-about-page/mv-company_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+//main_visual_service
+.main_visual_service {
+    background: url(../img/img-service-page/mv-service_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-service-page/mv-service_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+//main_visual_home
+.main_visual_home {
+    background: url(../img/img-home/mv-news_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-home/mv-news_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+//main_visual_case
+.main_visual_case {
+    background: url(../img/img-case-page/mv-company_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-case-page/mv-company_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+//main_visual_download
+.main_visual_download {
+    background: url(../img/img-download-page/mv-download_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-download-page/mv-download_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+//main_visual_contact
+.main_visual_contact {
+    background: url(../img/img-contact-page/mv-contact_pc@2x.png) center / cover no-repeat;
+
+    &::before {
+        background: url(../img/img-about-page/lower-mv-decoration_pc.svg) no-repeat;
+    }
+
+    @include mq('sp') {
+        background: url(../img/img-contact-page/mv-contact_sp@2x.png) center / cover no-repeat;
+
+        &::before {
+            background: url(../img/img-about-page/lower-mv-decoration_sp.svg) no-repeat;
+        }
+
+    }
+
+}
+
+
+.main_visual_content {
+    position: absolute;
+    left: 22%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include mq('sp') {
+        left: 20px;
+    }
+}
+
+.main_visual_title {
+    display: inline-block;
+    background: #FFFFFF;
+    font-size: 60px;
+    color: $color-main;
+    line-height: 1.1;
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-size: 32px;
+    }
+}
+
+.main_visual_subtitle {
+    display: inline-block;
+    margin-top: 8px;
+    background: #FFFFFF;
+    font-size: 20px;
+    color: $color-main;
+    font-weight: bold;
+
+    @include mq('sp') {
+        font-size: 16px;
+    }
+}
+
+
+//パンくずリスト
+
+.breadcrumb {
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 80px;
+
+    @include mq('sp') {
+        margin-bottom: 60px;
+    }
+}
+
+.breadcrumb_back {
+    color: #888888;
+}
+
+.breadcrumb_arrow {
+    font-weight: bold;
+}
